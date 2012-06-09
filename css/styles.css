@@ -1,0 +1,96 @@
+body {
+	width:80%;
+	margin:0 auto;
+}
+
+h1 {
+	font-family:"Impact", sans-serif;
+}
+
+.tagline {
+	float:left;
+	display:inline;
+	font-family:"Comic Sans MS";
+}
+
+ul {
+	float:right;
+}
+
+li {
+	float:left;
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+
+li a {
+	display:block;
+	width:100px;
+	background:rgb(255,0,0);
+	opacity: 0.5;
+	text-decoration:none;
+	color:#000000;
+	padding:6px;
+}
+
+li a.bordered {
+	border-right:1px solid #000000;
+}
+
+li a:link, footer a:link {
+	color:#000000;
+}
+
+li a:visited, footer a:visited {
+	color:gray;
+}
+
+li a:hover{
+	background:rgb(0,0,175);
+	color:white;
+}
+
+footer a:hover {
+	text-decoration:underline;
+}
+
+li a:active, footer a:active {
+	color:#CDC673;
+}
+
+footer a {
+	text-decoration:none;
+	color:#000000;
+}
+
+.break {
+	clear:both;
+}
+
+#wrapper {
+	width:100%;
+}
+
+#column1, #column2, #column3 {
+	display:inline;
+	float:left;
+	width: 30%;
+	padding:8px;
+}
+
+#column2 {
+    border-left:3px solid #000000;
+	border-right:3px solid #000000;
+	
+}
+
+h2 {
+	text-align:center;
+}
+
+footer div{
+	margin-top: 300px;
+	word-spacing: 50px;
+	text-align:center;
+}
