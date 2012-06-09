@@ -1,0 +1,36 @@
+Final project Notes
+
+Make it accessible - use skip to content, HTML5 elements, all images must have descriptive alts
+Follow W3C recommendations
+Have a shopping cart system for photos and maybe an account sign in sign out as well
+Use repetition, contrast, proximity and alignment
+For fonts, look at www.ampsoft.net/webdesign-WindowsMacFonts.html
+Use sans-serif fonts
+
+E-commerce pages should be HTTPS
+
+Seperate navigation and footer elements by &#124 |
+
+Use Jello design - fixed with of 60 - 80%
+
+Use breadcrumb navigation
+
+For colors, use webdevbasics.net/color
+wwww.colorschemedesigner.com
+wwww.colorjack.com
+www.colorsontheweb.com/colorwizard.asp
+
+1. Do Markup
+2. Do CSS
+3. Do JavaScript (for photos)
+4. Do queries to database for photos
+5. Do e-commerce (in PHP, use paypal, use https, Facebook API for Facebook login)
+6. Do mobile site
+
+Check out jQuery themeroller (http://jqueryui.com/themeroller/)
+
+The pseudo-classes should be in order: link, visited, hover, active
+
+Use first-line for columns
+
+jQuery beauty tip plugin for pics and Google Maps:: http://www.lullabot.com/files/bt/bt-latest/DEMO/index.html
