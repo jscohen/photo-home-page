@@ -1,0 +1,26 @@
+body {
+	width:80%;
+}
+
+#columns {
+	-moz-columns: 3;
+	-webkit-columns: 3;
+    -moz-column-gap: 1em;
+    -webkit-column-gap: 1em;
+    -moz-column-rule: 1px solid black;
+    -webkit-column-rule: 1px solid black;
+}
+
+#columns p {
+	break-before:column;
+}
+
+h2 {
+	text-align:center;
+}
+
+footer p{
+	margin-top: 30px;
+	word-spacing: 50px;
+	text-align:center;
+}
