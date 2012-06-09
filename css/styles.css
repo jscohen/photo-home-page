@@ -64,6 +64,19 @@ footer a {
 	color:#000000;
 }
 
+#slider_container {
+	width:100%;
+	height:500px;
+	background:#efc89e;
+}
+
+#slider_frame {
+	width:97%;
+	border:3px solid #000000;
+	height:494px;
+	margin: 0 auto;
+}
+
 .break {
 	clear:both;
 }
