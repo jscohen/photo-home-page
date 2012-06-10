@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Jonathan S. Cohen - Photography, Design and Development</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css/styles.css" />
+<link rel="stylesheet" type="text/css" href="css/jquery.ui.all.css" />
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/jquery-ui-1.8.21.custom.min.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<script src="js/jquery.ui.core.js"></script>
+<script src="js/jquery.ui.tabs.js"></script>
+<script src="js/jquery.ui.widget.js"></script>
+<script>
+	$(function() {
+
+		$( "#tabs" ).tabs({
+
+			cookie: {
+
+				// store cookie for a day, without, it would be a session cookie
+
+				expires: 1
+
+			}
+
+		});
+
+	});
+
+</script>
+<style type="text/css">
+	#tabs {
+		margin:0;
+		padding:0;
+		border-top:none;
+	}
+	
+	img {
+		border: 2px solid black;
+		width:340px;
+		height:340px;
+	}
+	
+	.thumbs {
+		margin-top:25px;
+		margin-left:-15px;
+	}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Jonathan S. Cohen</h1>
+<h2 class="tagline">Photos</h2>
+
+<nav>
+  <ul id="nav">
+    <li><a href="index.html" class="bordered">Home</a></li>
+    <li><a href="photos.html" class="bordered">Photography</a></li>
+    <li><a href="resume.html" class="bordered">Resume</a></li>
+  </ul>
+</nav>
+</header>
+
+<div class="break"></div>
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">Beijing</a></li>
+	<li><a href="#tabs-2">Hangzhou</a></li>
+	<li><a href="#tabs-3">Tibet</a></li>
+	<li><a href="#tabs-4">Xinjiang</a></li>
+	<li><a href="#tabs-5">Yunnan</a></li>
+  </ul>
+  
+  <div id="tabs-1">
+    <div class="thumbs">
+	  <img src="img/thumbs/forbiddencity_001_thumb.jpg" alt="The front of the forbidden city" />
+	  <img src="img/thumbs/forbiddencity_032_thumb.jpg" alt="A Wall in the Forbidden City" />
+	  <img src="img/thumbs/greatwall_018_thumb.jpg" alt="A shot of the Great Wall of China" />
+	  <img src="img/thumbs/tiananmen 093_thumb.jpg" alt="A shot of Tiananmen Square and Chinese Parliament at night" />
+	</div>
+  </div>
+  
+  <div id="tabs-2">
+    <div class="thumbs">
+	  <img src="img/thumbs/huangshan_zhaopian 040_thumb.jpg" alt="A waterfall by Huang Shan, the Yellow Mountain" />
+	  <img src="img/thumbs/huangshan_zhaopian 046_thumb.jpg" alt="The misty Yellow Mountains, Anhui, China" />
+	  <img src="img/thumbs/huangshan_zhaopian 067_thumb.jpg" alt="An island beach in Wenzhou" />
+	  <img src="img/thumbs/IMG_0605_thumb.jpg" alt="A boat on the main lake in Hangzhou" />
+	  <img src="img/thumbs/IMG_0621_thumb.jpg" alt="A pagoda on the lake, Hangzhou" />
+	  <img src="img/thumbs/IMG_0622_thumb.jpg" alt="Sunset on the Lake with a pagoda in the background, Hangzhou" />
+	</div>
+  </div>
+  
+  <div id="tabs-3">
+    <div class="thumbs">
+	  <img src="img/thumbs/IMG_1065_thumb.jpg" alt="The Potala Palace, Lhasa, Tibet" />
+	  <img src="img/thumbs/IMG_1333_thumb.jpg" alt="Fortress and Grassland, Shigatse, Tibet" />
+	  <img src="img/thumbs/IMG_1349_thumb.jpg" alt="Monks and Prayer Wheels, Shigatse, Tibet" />
+	  <img src="img/thumbs/To Everest and Back 203_thumb.jpg" alt="The road to Mount Everest, Tibet" />
+	</div>
+  </div>
+  
+  <div id="tabs-4">
+	<div class="thumbs">
+	  <img src="img/thumbs/xj 036_thumb.jpg" alt="The Taklamakan Desert, Western Xinjiang near Kashgar 1" />
+	  <img src="img/thumbs/xj 038_thumb.jpg" alt="The Taklamakan Desert, Western Xinjiang 2" />
+	  <img src="img/thumbs/xj_037_thumb.jpg" alt="The Taklamakan Desert, Western Xinjiang 3" />
+	  <img src="img/thumbs/xj 042_thumb.jpg" alt="A lone rider on lake Tashkurgan near the Kyrgyz border" />
+	</div>
+  </div>
+  
+  <div id="tabs-5">
+    <div class="thumbs">
+	  <img src="img/thumbs/yunnan 346_thumb.jpg" alt="Entrance to a Buddhist Temple, Xishuangbanna, Yunnan" />
+	  <img src="img/thumbs/yunnan 360_thumb.jpg" alt="A Pagoda, Xishuangbanna, Yunnan" />
+	</div>
+  </div>
+
+</div>
+
+<br />
+<br />
+
+<footer>
+<div><a href="index.html">Home</a> | <a href="photos.html">Photography</a> | <a href="resume.html">Resume</a></div>
+</footer>
+
+</body>
+</html>

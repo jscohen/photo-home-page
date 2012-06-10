@@ -13,40 +13,43 @@ h1 {
 	font-family:"Comic Sans MS";
 }
 
-ul {
+#nav{
 	float:right;
 }
 
-li {
+#nav li {
 	float:left;
 	list-style-type:none;
 	margin:0;
 	padding:0;
 }
 
-li a {
+#nav li a {
 	display:block;
 	width:100px;
-	background:rgb(255,0,0);
-	opacity: 0.5;
+	background:#0078ae;
 	text-decoration:none;
 	color:#000000;
 	padding:6px;
 }
 
-li a.bordered {
+#nav li a.bordered {
 	border-right:1px solid #000000;
 }
 
-li a:link, footer a:link {
+#nav li a:link{
+	color:#FFFFFF;
+}
+
+footer a:link {
 	color:#000000;
 }
 
-li a:visited, footer a:visited {
-	color:gray;
+#nav li a:visited {
+	color:#FFFFFF;
 }
 
-li a:hover{
+#nav li a:hover{
 	background:rgb(0,0,175);
 	color:white;
 }
