@@ -3,6 +3,10 @@ body {
 	margin:0 auto;
 }
 
+header, nav, footer {
+	display:block;
+}
+
 h1 {
 	font-family:"Impact", sans-serif;
 }
