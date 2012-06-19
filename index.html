@@ -7,9 +7,31 @@
 <!--[if lt IE 9]>
 <script scr="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
+<script src="js/jquery-1.7.2.min.js"></script>
+
+<script>
+$(document).ready(function(){ 
+var pics = [$('#gal_1'), $('#gal_2'), $('#gal_3'), $('#gal_4')];
+var pic_num = 0;
+
+	$("#gallery-next").click(function() {
+		if(pic_num < 3 || pic_num == 5) {
+			if(pic_num==5) {pic_num = 0;}
+			$(pics[pic_num]).fadeOut("slow");
+			pic_num++;
+		}
+		else if (pic_num==3) {
+			pic_num = 0;
+			$(pics[pic_num]).fadeIn("slow");
+			pic_num = 5;
+		}
+	});
+
+});
+</script>
 </head>
 <body>
-<div id="wrapper">
+<div id="body_wrapper">
 <header>
 <h1>Jonathan S. Cohen</h1>
 <h2 class="tagline">Photography, Design and Development</h2>
@@ -26,15 +48,23 @@
 <div class="break"></div>
 
 <div id="slider_container">
-  <div id="slider_frame">
-  
-  </div>
+  <ul id="gallery">
+    <li><img src="img/hangzhou/huangshan_zhaopian 040.jpg" alt="A waterfall near the Yellow Mountains, Anhui Province, China" id ="gal_1"/></li>  
+    <li><img src="img/beijing/forbiddencity 032.jpg" alt="A Wall in the Forbidden City, Beijing" id="gal_2"/></li>
+	<li><img src="img/tibet/IMG_1349.jpg" alt="Monks walking by pagodas, Drepung monastery, Tibet" id="gal_3"/></li>
+	<li><img src="img/xinjiang/xj_042.jpg" alt="A long rider on Tashkurgan lake, Western Xinjiang" id="gal_4"/></li>
+  </ul>
+</div>
+
+<div id="slider_controls">
+  <a href="#" id="gallery-prev">Previous Photo</a>
+  <a href="#" id="gallery-next">Next Photo</a>
 </div>
 
 <br />
 <br />
 
-<div id="wrapper">
+<div id="column_wrapper">
   <div id="column1">
     <h2>About Me</h2>
 
