@@ -11,29 +11,41 @@
 
 <script>
 $(document).ready(function(){ 
+
 var pics = [$('#gal_1'), $('#gal_2'), $('#gal_3'), $('#gal_4')];
 var pic_num = 0;
 
 	$("#gallery-next").click(function() {
-		if(pic_num < 3 || pic_num == 5) {
-			if(pic_num==5) {pic_num = 0;}
+		if(pic_num < 3 || pic_num === 5) {
+			if(pic_num===5) {pic_num = 0;}
 			$(pics[pic_num]).fadeOut("slow");
 			pic_num++;
 		}
-		else if (pic_num==3) {
+		else if (pic_num===3) {
 			pic_num = 0;
 			$(pics[pic_num]).fadeIn("slow");
 			pic_num = 5;
 		}
 	});
-
+	
+	$("#gallery-prev").click(function() {
+		if(pic_num===0) {
+			pic_num = 1;
+		}
+		pic_num--;
+		$(pics[pic_num]).fadeIn("slow");	
+	});	
+	
 });
 </script>
 </head>
 <body>
+
 <div id="body_wrapper">
+
 <header>
 <h1>Jonathan S. Cohen</h1>
+<div id="head_wrap">
 <h2 class="tagline">Photography, Design and Development</h2>
 
 <nav>
@@ -43,6 +55,7 @@ var pic_num = 0;
     <li><a href="resume.html" class="bordered">Resume</a></li>
   </ul>
 </nav>
+</div>
 </header>
 
 <div class="break"></div>
@@ -56,11 +69,10 @@ var pic_num = 0;
   </ul>
 </div>
 
-<div id="slider_controls">
-  <a href="#" id="gallery-prev">Previous Photo</a>
-  <a href="#" id="gallery-next">Next Photo</a>
-</div>
+<div id="gallery-prev">Previous</div>
+<div id="gallery-next">Next</div>
 
+<br />
 <br />
 <br />
 
