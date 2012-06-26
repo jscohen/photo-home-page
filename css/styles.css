@@ -113,6 +113,7 @@ footer a {
 img {
 	height:450px;
 	width:550px;
+	position:absolute;
 }
 
 .hide {
