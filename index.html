@@ -10,7 +10,6 @@
 <script src="js/jquery-1.7.2.min.js"></script>
 <script>
 $(document).ready(function() {
-	//slideShow();
 	var pics = [$('#img1'), $('#img2'), $('#img3'), $('#img4')];
 	var pic_num = 0;
 
@@ -44,19 +43,6 @@ $(document).ready(function() {
 		$('#caption').innerHTML = $(pics[pic_num]).attr("alt");
 	});
 });
-/*
-function slideShow() {
-	var current = $('#photos .show');
-	var next = current.next().length ? current.next() :
-	current.parent().children(':first');
-	
-	current.hide().removeClass('show');
-	next.fadeIn().addClass('show');
-	//$('#caption').append($(next).attr("alt"));
-	$('#caption').innerHTML = $(next).attr("alt");
-	setTimeout(slideShow, 6000);
-}
-*/
 </script>
 </head>
 <body>
