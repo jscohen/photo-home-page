@@ -101,9 +101,6 @@ footer a {
 	position:relative;
 }
 
-.hide {
-	display:none;
-}
 
 
 #photos {
@@ -116,6 +113,10 @@ footer a {
 img {
 	height:450px;
 	width:550px;
+}
+
+.hide {
+	display:none;
 }
 
 .break {

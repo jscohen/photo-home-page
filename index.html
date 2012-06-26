@@ -10,9 +10,31 @@
 <script src="js/jquery-1.7.2.min.js"></script>
 <script>
 $(document).ready(function() {
-	slideShow();
-});
+	//slideShow();
+	var pics = [$('#img1'), $('#img2'), $('#img3'), $('#img4')];
+	var pic_num = 0;
 
+	$('#next').click(function() {
+		if(pic_num > 3) {pic_num = 0;}
+		pics[pic_num].fadeOut();
+		pic_num++;
+		pics[pic_num].fadeIn();
+		$('#caption').innerHTML = $(pics[pic_num]).attr("alt");
+	});
+	
+	$('#prev').click(function() {
+		pics[pic_num].fadeOut();
+		if(pic_num < 1) {
+			pic_num = 3;
+		}
+		else {
+			pic_num--;
+		}
+		pics[pic_num].fadeIn();
+		$('#caption').innerHTML = $(pics[pic_num]).attr("alt");
+	});
+});
+/*
 function slideShow() {
 	var current = $('#photos .show');
 	var next = current.next().length ? current.next() :
@@ -22,9 +44,9 @@ function slideShow() {
 	next.fadeIn().addClass('show');
 	//$('#caption').append($(next).attr("alt"));
 	$('#caption').innerHTML = $(next).attr("alt");
-	setTimeout(slideShow, 3000);
+	setTimeout(slideShow, 6000);
 }
-
+*/
 </script>
 </head>
 <body>
@@ -49,14 +71,14 @@ function slideShow() {
 <div class="break"></div>
 <div id="slider_container">
 <div id="photos">
-	<img src="img/hangzhou/huangshan_zhaopian 040.jpg" class="show" alt="A waterfall near the Yellow Mountains, Anhui Province, China" />
-	<img src="img/beijing/forbiddencity 032.jpg" class="hide" alt="A Wall in the Forbidden City, Beijing" />
-	<img src="img/tibet/IMG_1349.jpg" class="hide" alt="Monks walking by pagodas, Drepung monastery, Tibet" />
-	<img src="img/xinjiang/xj_042.jpg" class="hide" alt="A lone rider on Tashkurgan lake, Western Xinjiang" />
+	<img src="img/hangzhou/huangshan_zhaopian 040.jpg" id="img1" alt="A waterfall near the Yellow Mountains, Anhui Province, China" />
+	<img src="img/beijing/forbiddencity 032.jpg" class="hide" id="img2" alt="A Wall in the Forbidden City, Beijing" />
+	<img src="img/tibet/IMG_1349.jpg" class="hide" id="img3 alt="Monks walking by pagodas, Drepung monastery, Tibet" />
+	<img src="img/xinjiang/xj_042.jpg" class="hide" id="img4" alt="A lone rider on Tashkurgan lake, Western Xinjiang" />
 </div>
 <caption id="caption"></caption>
-<button id="#prev">Previous Image</button>
-<button id="#next">Next Image</button>
+<button id="prev">Previous Image</button>
+<button id="next">Next Image</p>
 </div>
 
 <br />
