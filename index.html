@@ -13,6 +13,8 @@ $(document).ready(function() {
 	var pics = [$('#img1'), $('#img2'), $('#img3'), $('#img4')];
 	var pic_num = 0;
 
+	// go to the next picture when clicking on next
+	// go back to the first picture after the last one
 	$('#next').click(function() {
 		
 		pics[pic_num].fadeOut();
@@ -30,6 +32,7 @@ $(document).ready(function() {
 		$('#caption').innerHTML = caption;
 	});
 	
+	// go back to the previous picture, same as next
 	$('#prev').click(function() {
 		pics[pic_num].fadeOut();
 		if(pic_num < 1) {
