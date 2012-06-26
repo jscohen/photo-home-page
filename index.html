@@ -15,14 +15,20 @@ $(document).ready(function() {
 	var pic_num = 0;
 
 	$('#next').click(function() {
+		
+		pics[pic_num].fadeOut();
+		pic_num++;
+		
 		if(pic_num > 3) {
 			pic_num = 0;
 		}
 		
-		pics[pic_num].fadeOut();
-		pic_num++;
 		pics[pic_num].fadeIn();
-		$('#caption').innerHTML = $(pics[pic_num]).attr("alt");
+		
+		var current = pics[pic_num];
+		
+		var caption = $(pics[pic_num]).attr("alt");
+		$('#caption').innerHTML = caption;
 	});
 	
 	$('#prev').click(function() {
