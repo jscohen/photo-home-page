@@ -12,6 +12,10 @@ body {
 	border-radius:10px;
 }
 
+#signup {
+	float:right;
+}
+
 header, nav, footer {
 	display:block;
 }
@@ -114,9 +118,17 @@ footer a {
 	position:absolute;
 }
 
-figcaption {
+#cap1, #cap2, #cap3, #cap4 {
 	position:absolute;
+	background-color:gray;
+	color:#000000;
+	opacity:0.8;
+	width:553px;
+	margin-top:450px;
+}
 
+#buttons {
+	margin-left:150px;
 }
 
 .hide {
