@@ -7,8 +7,6 @@ body {
 	margin:0 auto;
 	background:#b3c7e6;
 	border:3px solid #000000;
-	-webkit-border-radius:10px;
-	-moz-border-radius:10px;
 	border-radius:10px;
 }
 
@@ -40,14 +38,14 @@ h1 {
 	float:right;
 }
 
-#nav li {
+#nav li, #tabs li{
 	float:left;
 	list-style-type:none;
 	margin:0;
 	padding:0;
 }
 
-#nav li a {
+#nav li a, #tabs li a {
 	display:block;
 	width:100px;
 	background:#0078ae;
@@ -56,7 +54,7 @@ h1 {
 	padding:6px;
 }
 
-#nav li a.bordered {
+#nav li a.bordered, #tabs li a.bordered{
 	border-right:1px solid #000000;
 }
 
@@ -64,21 +62,15 @@ h1 {
 	color:#FFFFFF;
 }
 
-footer a:link {
-	color:#000000;
-}
 
-#nav li a:visited {
+
+#nav li a:visited{
 	color:#FFFFFF;
 }
 
-#nav li a:hover{
+#nav li a:hover, #tabs li a:hover{
 	background:rgb(0,0,175);
 	color:white;
-}
-
-footer a:hover {
-	text-decoration:underline;
 }
 
 li a:active, footer a:active {
@@ -94,6 +86,13 @@ footer a {
 	color:#000000;
 }
 
+footer a:link {
+	color:#000000;
+}
+
+footer a:hover {
+	text-decoration:underline;
+}
 
 #slider_container {
 	height:550px;

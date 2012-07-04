@@ -1,0 +1,55 @@
+	#tabs {
+		margin:0;
+		padding:0;
+		border-top:none;
+	}
+	
+	#tabs ul {
+		width:800px;
+		margin:0 auto;
+	}
+	
+	.thumb {
+		border: 2px solid black;
+		width:45%;
+		height:340px;
+		margin-left:15px;
+		margin-top:5px;
+	}
+	
+	.thumbs {
+		margin-top:25px;
+		margin: 0 auto;
+	}
+	
+	.intro {
+		background-color:#fcfdfd;
+		padding-bottom:15px;
+		border-top: 3px solid #000000;
+	}
+	
+	.intro h2 {
+		font-family:Arial, Verdana sans-serif;
+	}
+	
+	.intro_p {
+		font-family:Arial, Verdana sans-serif;
+		font-size:1.1em;
+	}
+	
+	#tabs ul {
+		margin-left:270px;
+		margin-right:325px;
+	}
+	
+	hr {
+		margin-top:60px;
+	}
+	.clear {
+		clear:both;
+	}
+	
+	.selected {
+		display:block;
+	}
+	
