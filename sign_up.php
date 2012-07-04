@@ -11,18 +11,29 @@
 <link rel="stylesheet" type="text/css" href="css/styles.css" />
 <script src="js/jquery-1.7.2.min.js"></script>
 <script>
-
-function checkForm () {
+function validate_un() {
 	var ck_name = /^[A-Za-z]{3,8}$/;
 	var ck_email = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-	var ck_pw = /^[a-z0-9_-]{6,18}$/;
+
 	if ((document.signup.user_name.value.search(ck_name)==-1) && (document.signup.user_name.value.search(ck_email)==-1)) {
-		alert("Please enter a valid user name or email address");
+		$('#unError').html("Please enter a valid user name or email address");
 	}
+	else {
+		$('#unError').html('');
+	}
+}
+
+function validate_pw () {
+
+	var ck_pw = /^[a-z0-9_-]{6,18}$/;
+
 	if (document.signup.password.value.search(ck_pw)==-1) {
-		alert("Please enter a valid password");
+		$('#pwError').html("Please enter a valid password");
 	}
-};
+	else {
+		$('#pwError').html('');
+	}
+}
 
 </script>
 <style>
@@ -71,10 +82,10 @@ function checkForm () {
 <div id="form">
 <form method="post" name="signup">
 <label>Username/Email</label>
-<input type="text" name="user_name" /><br />
+<input type="text" name="user_name" onkeyup="validate_un()" /><p id="unError"></p><br />
 <label>Password</label>
-<input type="password" name="password" id="form2" /><br /><br />
-<input type="submit" value="Submit" name="submit" id="submit" onClick="checkForm()" />
+<input type="password" name="password" id="form2" onkeyup="validate_pw()"/><p id="pwError"></p><br /><br />
+<input type="submit" value="Submit" name="submit" id="submit" />
 </form>
 </div>
 
