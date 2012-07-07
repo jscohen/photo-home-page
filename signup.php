@@ -19,10 +19,11 @@
 		header ('Location: sign_up.html');
 	}
 	
-	mysql_connect("localhost", "root", "") or die(mysql_error()); 
-	mysql_select_db("photo_store") or die(mysql_error()); 
-	mysql_query("INSERT INTO `users` VALUES ('$name', '$password')"); 
+	$con = mysql_connect("localhost", "root", "") or die(mysql_error()); 
+	mysql_select_db("photo_store", $con) or die(mysql_error()); 
+	mysql_query("INSERT INTO users(name, password) VALUES ('$name', '$password')"); 
 	
+	mysql_close($con);
 	header( 'Location: index.html' ) ;
 	
 ?>

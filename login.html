@@ -43,8 +43,8 @@
 
 <nav>
   <ul id="nav">
-    <li><a href="index.html" class="bordered">Home</a></li>
-    <li><a href="photos.html" class="bordered">Photography</a></li>
+    <li><a href="index.php" class="bordered">Home</a></li>
+    <li><a href="photos.php" class="bordered">Photography</a></li>
   </ul>
 </nav>
 </header>
@@ -59,11 +59,11 @@
 <h3>Please enter your email/username and password.</h3>
 
 <div id="form">
-<form method="post" name="signup" action="login.php">
+<form method="post" name="signup" action="authenticate.php">
 <label>Username/Email</label>
-<input type="text" name="user_name" onkeyup="validate_un()" /><br />
+<input type="text" name="user_name" /><br />
 <label>Password</label>
-<input type="password" name="password" id="form2" onkeyup="validate_pw()"/><br /><br />
+<input type="password" name="password" id="form2"/><br /><br />
 <input type="submit" value="Submit" name="submit" id="submit" />
 </form>
 </div>
