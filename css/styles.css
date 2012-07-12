@@ -10,7 +10,9 @@ body {
 	border-radius:10px;
 }
 
-#signup {
+
+
+.head {
 	float:right;
 	margin-right:5px;
 }
@@ -69,8 +71,6 @@ h2 {
 #nav li a:link{
 	color:#FFFFFF;
 }
-
-
 
 #nav li a:visited{
 	color:#FFFFFF;

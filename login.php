@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,6 +64,13 @@
 <h3>Log In Page</h3>
 <h3>Please enter your email/username and password.</h3>
 
+<?php
+
+if(isset($_SESSION["login_failed"])) {
+	$var = $_SESSION['login_failed'];
+	echo "<h3>$var</h3>";
+}
+?>
 <div id="form">
 <form method="post" name="signup" action="authenticate.php">
 <label>Username/Email</label>

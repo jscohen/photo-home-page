@@ -36,12 +36,13 @@ echo '<script src="js/tabs.js"></script>';
 <div id="body_wrapper">
 <?php
 if(isset($_SESSION["name"])) {
-	echo "<div style='float:right'><span>Welcome ";
+	echo "<div class='head'><span>Welcome ";
 	echo $_SESSION["name"];
 	echo "!</span>   <a href='logout.php'>Log out</a></div>";
+	echo "<br /><div class='head'><a href='shopping_cart.php'>Shopping Cart</a></div>";
 }
 else {
- echo "<p id='signup'><a href='login.html'>Log In</a>   <a href='sign_up.html'>Sign up</a></p>";
+ echo "<p class='head'><a href='login.php'>Log In</a>   <a href='sign_up.html'>Sign up</a></p>";
 }
 ?>
 <header>

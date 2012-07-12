@@ -11,22 +11,19 @@
     $row = mysql_fetch_assoc($users);
   }
   else {
-	echo "Please enter in a username and password!";
-	header( 'Location: login.html');
-  }  
+    if(isset($_SESSION["login_failed"])) { unset($_SESSION["login_failed"])};
+	header('Location: login.html');
+	exit();
+  }
   
   if ( count($row) == 3 ) {
     $_SESSION["name"] = $_POST['user_name'];
-	echo "Welcome, ";
-	echo($_SESSION["name"]);
-	echo("!");
-	header ( 'Location: index.php');
+    if(isset($_SESSION["login_failed"])) { unset($_SESSION["login_failed"])};
+	header ('Location: index.php');
+	exit();
   } else {
-	echo "Authentication Failed";
-	header( 'Location: login.html');
+    $_SESSION["login_failed"] = "Your username or password are incorrect";
+	header('Location: login.php');
+	exit();
   }
-
 ?>
-
-  
-  

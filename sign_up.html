@@ -30,7 +30,7 @@
 		margin-left:100px;
 	}
 	
-	#unError, #pwError {
+	#unError, #pwError, #noSubmit {
 		color:#FF0000;
 		font-weight:bold;
 	}
@@ -60,7 +60,8 @@
 <input type="text" name="user_name" onkeyup="validate_un()" /><span id="unError"></span><br />
 <label>Password</label>
 <input type="password" name="password" id="form2" onkeyup="validate_pw()"/><span id="pwError"></span><br /><br />
-<input type="submit" value="Submit" name="submit" id="submit" />
+<input type="submit" value="Submit" name="submit" id="submit"/><br />
+<span id="noSubmit"></span>
 </form>
 </div>
 
