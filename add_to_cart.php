@@ -1,11 +1,19 @@
 <?php
 
 session_start();
-$id = $_POST['name'];
 
-$photo_ids = array();
+$url = $_SERVER["QUERY_STRING"];
+$parsed = array();
 
+parse_str($url, $parsed);
+
+print_r($parsed);
+
+$_SESSION['cart'] = $parsed;
+
+echo $_SESSION['cart'];
 // making sure photos aren't added twice
+/*
 foreach($photo_ids as &$i) {
 	if($photo_ids[i] == $id) {
 		header ( 'Location: photos.php');
@@ -15,10 +23,8 @@ foreach($photo_ids as &$i) {
 
 array_push($photo_ids, $id);
 
-$_SESSION['cart'] = $photo_ids;
-
-header( 'Location: photos.php');
+//header( 'Location: shopping_cart.php');
 
 exit();
-
+*/
 ?>

@@ -2,7 +2,7 @@ $(document).ready(function(){
 	$('#tabs div').hide();
 	$('#tabs div:first').show();
 	$('#tabs ul li:first').addClass('active');
-	$('<br /><form action="add_to_cart.php"><input type="submit" value="Add to Cart" method="post" class="photo" style="margin-left:100px;" /></form><br />').insertAfter('.lytebox');
+	$('<br /><form action="add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:100px;" /></form><br />').insertAfter('.lytebox');
 
 	var i = 1;
 	
@@ -23,8 +23,8 @@ $(document).ready(function(){
 	var currentTab = $(this).attr('href');
 	$('#tabs div').hide();
 	$(currentTab).show();
-	$('.lytebox').remove('<br /><form action="add_to_cart.php"><input type="submit" value="Add to Cart" method="post" class="photo" style="margin-left:100px;" /></form><br />');
-	$('<br /><form action="add_to_cart.php"><input type="submit" value="Add to Cart" method="post" class="photo" style="margin-left:100px;" /></form><br />').insertAfter('.lytebox');
+	$('.lytebox').remove('<br /><form action="add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:100px;" /></form><br />');
+	$('<br /><form action="add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:100px;" /></form><br />').insertAfter('.lytebox');
 
 	var desc = $('.photo').closest('img').attr('alt');
 	$('.photo').attr('name', desc);

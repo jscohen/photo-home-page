@@ -11,14 +11,12 @@
     $row = mysql_fetch_assoc($users);
   }
   else {
-    if(isset($_SESSION["login_failed"])) { unset($_SESSION["login_failed"])};
-	header('Location: login.html');
+	header('Location: login.php');
 	exit();
   }
   
   if ( count($row) == 3 ) {
     $_SESSION["name"] = $_POST['user_name'];
-    if(isset($_SESSION["login_failed"])) { unset($_SESSION["login_failed"])};
 	header ('Location: index.php');
 	exit();
   } else {
