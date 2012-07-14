@@ -17,6 +17,8 @@
   
   if ( count($row) == 3 ) {
     $_SESSION["name"] = $_POST['user_name'];
+    $_SESSION['ids'] = array();
+    $_SESSION['cart'] = array();
 	header ('Location: index.php');
 	exit();
   } else {

@@ -10,8 +10,6 @@ body {
 	border-radius:10px;
 }
 
-
-
 .head {
 	float:right;
 	margin-right:5px;
@@ -165,6 +163,18 @@ footer a:hover {
 
 h2 {
 	text-align:center;
+}
+
+table {
+	margin: 0 auto;
+}
+
+button {
+	margin-left: 75%;
+}
+
+.checkout {
+	text-decoration:none;
 }
 
 footer div{

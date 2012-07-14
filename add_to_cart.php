@@ -1,30 +1,23 @@
-<?php
-
+<?php 
 session_start();
 
 $url = $_SERVER["QUERY_STRING"];
-$parsed = array();
 
-parse_str($url, $parsed);
+$parts = parse_url($url);
 
-print_r($parsed);
 
-$_SESSION['cart'] = $parsed;
-
-echo $_SESSION['cart'];
-// making sure photos aren't added twice
-/*
-foreach($photo_ids as &$i) {
-	if($photo_ids[i] == $id) {
-		header ( 'Location: photos.php');
-		exit();
-	}
+// find the photo id from the url
+if(isset($parts['path'])) {
+	$string = $parts['path'];
+	$photo_id = preg_replace("/[^0-9]/", "", $parts['path']);
 }
 
-array_push($photo_ids, $id);
+// get the photo id into our global array
+array_push($_SESSION['ids'], $photo_id);
 
-//header( 'Location: shopping_cart.php');
+$_SESSION['ids'] = array_unique($_SESSION['ids']);
 
+header( 'Location: shopping_cart.php');
 exit();
-*/
+
 ?>

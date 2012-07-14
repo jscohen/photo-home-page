@@ -3,12 +3,14 @@
 session_start();
 require "database.mysql.php";
 
-print_r($_SESSION['cart']);
+$row = array();
 
-foreach($_SESSION['cart'] as &$value) {
+foreach($_SESSION['ids'] as &$value) {
 	$users = mysql_query("SELECT * FROM photos WHERE ID='$value'", $resource);
-	$row = mysql_fetch_assoc($users);
+	array_push($row, mysql_fetch_assoc($users));
 }
+
+$_SESSION['cart'] = $row;
 
 ?>
 
@@ -51,19 +53,25 @@ else {
 <br />
 
 <h2>Shopping Cart</h2>
+<table border='1'>
+  <tr>
+    <th>Photo Description</th>
+    <th>Price</th>
+  </tr>
+  
+<?php
+foreach($_SESSION['cart'] as &$photo) {
+  echo "<tr><td>";
+  print_r($photo['description']);
+  echo "</td><td>$";
+  print_r($photo['price']);
+  echo ".00</td></tr>";
+}
+?>
 
-<table border="1">
-<tr>
-  <th>Photo Description</th>
-  <th>Price</th>
-</tr>
-<tr>
-  <td><?php print_r($row); ?></td>
-  <td></td>
-</tr>
 </table>
 
-<button>Checkout</button>
+<a href="checkout.php" class="checkout"><button>Checkout</button></a>
 
 <footer>
 <div><a href="index.html">Home</a> | <a href="photos.html">Photography</a></div>
