@@ -9,6 +9,9 @@ session_start();
 <head>
 <title>Jonathan S. Cohen - Photography, Design and Development</title>
 <meta charset="utf-8">
+<meta name="keywords" content="Jonathan Cohen, China, Photography, Web Design, Web Development, PHP Development, Tibet, Xinjiang, Yunnan" >
+<meta name="description" content="Jonathan Cohen's Photography Page showcasing photos from all parts of China" >
+
 <link rel="stylesheet" type="text/css" href="css/styles.css" />
 <link rel="stylesheet" type="text/css" href="lytebox.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="css/tabs.css" />

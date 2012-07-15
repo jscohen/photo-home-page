@@ -9,6 +9,8 @@ session_start();
 <head>
 <title>Jonathan S. Cohen - Photography, Design and Development</title>
 <meta charset="utf-8">
+<meta name="keywords" content="Jonathan Cohen, China, Photography, Web Design, Web Development" >
+<meta name="description" content="Jonathan Cohen's Home Page for Photography, Web Design and Development" >
 <link rel="stylesheet" type="text/css" href="css/styles.css" />
 <!--[if lt IE 9]>
 <script scr="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
