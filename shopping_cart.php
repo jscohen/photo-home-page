@@ -51,30 +51,38 @@ else {
 
 <br />
 <br />
+<?php 
 
-<h2>Shopping Cart</h2>
-<table border='1'>
-  <tr>
-    <th>Photo Description</th>
-    <th>Price</th>
-  </tr>
-  
-<?php
-foreach($_SESSION['cart'] as &$photo) {
-  echo "<tr><td>";
-  print_r($photo['description']);
-  echo "</td><td>$";
-  print_r($photo['price']);
-  echo ".00</td></tr>";
+if(empty($_SESSION['ids'])) {
+	echo "<h2>Your shopping cart is empty</h2>";
+}
+else {
+
+  echo "<h2>Shopping Cart</h2>
+         <table border='1'>
+           <tr>
+             <th>Photo Description</th>
+             <th>Price</th>
+          </tr>";  
+
+  foreach($_SESSION['cart'] as &$photo) {
+    echo "<tr><td>";
+    print_r($photo['description']);
+    echo "</td><td>$";
+    print_r($photo['price']);
+    echo ".00</td></tr>";
+  }
+
+echo "</table>";
 }
 ?>
 
-</table>
-
+<a href="emptyCart.php" class="checkout"><button>Clear Shopping Cart</button></a>
 <a href="checkout.php" class="checkout"><button>Checkout</button></a>
 
 <footer>
 <div><a href="index.html">Home</a> | <a href="photos.html">Photography</a></div>
+<small>&copy; Jonathan Cohen 2012</small>
 </footer>
 </div>
 </body>

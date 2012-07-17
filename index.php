@@ -95,6 +95,7 @@ else {
 
 <footer>
 <div><a href="index.html">Home</a> | <a href="photos.html">Photography</a></div>
+<small>&copy; Jonathan Cohen 2012</small>
 </footer>
 </div>
 </body>
