@@ -71,7 +71,6 @@ input {
 
 .check {
 	text-align:center;
-	margin-left:200px;
 }
 </style>
 </head>
@@ -128,21 +127,22 @@ foreach($_SESSION['cart'] as &$photo) {
 <h2>Please enter your billing and shipping information</h2>
 <h2>Please note that this is a class project site; DO NOT actually send your personal information here</h2>
 <br />
-<p class="check">My billing and shipping addresses are the same <input type="checkbox" class="noFloat" /></p>
 
 <div class="formContainer">
-<div class="billing">
-<form id="billing" action="confirm.php">
+<form class="billing" action="confirm.php" method="post">
+<p class="check">My billing and shipping addresses are the same <input type="checkbox" class="noFloat" name="noship" value="checked" /></p>
+
+<div id="billing">
 <h4>Billing Info</h4>
 <span>Form of address:<span>
-<select>
-  <option>Dr.</option>
-  <option>Mr.</option>
-  <option>Ms.</option>
-  <option>Mrs.</option>
+<select name="baddress">
+  <option value="Dr.">Dr.</option>
+  <option value="Mr.">Mr.</option>
+  <option value="Ms.">Ms.</option>
+  <option value="Mrs.">Mrs.</option>
 </select><br /><br />
 <label>First Name</label><input type="text" name="bfname" /><div class="clear"></div><br />
-<label>Last Name</label><input type="text" name="bfname" /><div class="clear"></div><br />
+<label>Last Name</label><input type="text" name="blname" /><div class="clear"></div><br />
 <label>Billing Address Line 1</label> <input type="text" name="badd1" /><div class="clear"></div><br />
 <label>Billing Address Line 2</label> <input type="text" name="badd2" /><div class="clear"></div><br />
 <label>Billing Address Line 3</label> <input type="text" name="badd3" /><div class="clear"></div><br />
@@ -165,21 +165,21 @@ Choose Your Credit Card
 <div id="shipping">
 <h4>Shipping Info</h4>
 <span>Form of address:<span>
-<select>
-  <option>Dr.</option>
-  <option>Mr.</option>
-  <option>Ms.</option>
-  <option>Mrs.</option>
+<select name="saddress">
+  <option value="Dr.">Dr.</option>
+  <option value="Mr.">Mr.</option>
+  <option value="Ms.">Ms.</option>
+  <option value="Mrs.">Mrs.</option>
 </select><br /><br />
 <label>First Name</label><input type="text" name="sfname" /><div class="clear"></div><br />
-<label>Last Name</label><input type="text" name="bfname" /><div class="clear"></div><br />
-<label>Shipping Address Line 1</label> <input type="text" name="badd1" /><div class="clear"></div><br />
-<label>Shipping Address Line 2</label> <input type="text" name="badd2" /><div class="clear"></div><br />
-<label>Shipping Address Line 3</label> <input type="text" name="badd3" /><div class="clear"></div><br />
-<label>Apartment Number</label> <input type="text" name="apt" /><div class="clear"></div><br />
-<label>Shipping City</label> <input type="text" name="bcity" /><div class="clear"></div><br />
-<label>Shipping State</label> <input type="text" name="bstate" /><div class="clear"></div><br />
-<label>Shipping Zip Code</label> <input type="text" name="bzip" /><div class="clear"></div><br />
+<label>Last Name</label><input type="text" name="slname" /><div class="clear"></div><br />
+<label>Shipping Address Line 1</label> <input type="text" name="sadd1" /><div class="clear"></div><br />
+<label>Shipping Address Line 2</label> <input type="text" name="sadd2" /><div class="clear"></div><br />
+<label>Shipping Address Line 3</label> <input type="text" name="sadd3" /><div class="clear"></div><br />
+<label>Apartment Number</label> <input type="text" name="sapt" /><div class="clear"></div><br />
+<label>Shipping City</label> <input type="text" name="scity" /><div class="clear"></div><br />
+<label>Shipping State</label> <input type="text" name="sstate" /><div class="clear"></div><br />
+<label>Shipping Zip Code</label> <input type="text" name="szip" /><div class="clear"></div><br />
 </div>
 <div class="clear"></div>
 

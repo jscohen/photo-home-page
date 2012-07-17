@@ -11,7 +11,6 @@ foreach($_SESSION['ids'] as &$value) {
 }
 
 $_SESSION['cart'] = $row;
-
 ?>
 
 <!DOCTYPE html>
@@ -70,15 +69,22 @@ else {
     print_r($photo['description']);
     echo "</td><td>$";
     print_r($photo['price']);
-    echo ".00</td></tr>";
+    echo ".00</td><td>";
+    ?><form action='remove_item.php'><input type='submit' method='get' value='Remove Item from Cart' name='<?php echo $photo['ID'];?>' />
+    <?php echo "</td></tr>";
   }
 
 echo "</table>";
 }
 ?>
 
-<a href="emptyCart.php" class="checkout"><button>Clear Shopping Cart</button></a>
-<a href="checkout.php" class="checkout"><button>Checkout</button></a>
+<?php
+
+if(!empty($_SESSION['ids'])) {
+	echo "<a href='emptyCart.php' class='checkout'><button>Clear Shopping Cart</button></a>";
+	echo "<a href='checkout.php' class='checkout'><button>Checkout</button></a>";
+}
+?>
 
 <footer>
 <div><a href="index.html">Home</a> | <a href="photos.html">Photography</a></div>

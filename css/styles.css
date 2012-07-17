@@ -177,6 +177,10 @@ button {
 	text-decoration:none;
 }
 
+.clear {
+	clear:both;
+}
+
 footer div{
 	margin-top: 300px;
 	word-spacing: 50px;
