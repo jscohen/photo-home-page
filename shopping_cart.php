@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require "database.mysql.php";
+require "scripts/database.mysql.php";
 
 $row = array();
 
@@ -27,7 +27,7 @@ $_SESSION['cart'] = $row;
 if(isset($_SESSION["name"])) {
 	echo "<div class='head'><span>Welcome ";
 	echo $_SESSION["name"];
-	echo "!</span>   <a href='logout.php'>Log out</a></div>";
+	echo "!</span>   <a href='scripts/logout.php'>Log out</a></div>";
 	echo "<br /><div class='head'><a href='shopping_cart.php'>Shopping Cart</a></div>";
 }
 else {
@@ -70,25 +70,25 @@ else {
     echo "</td><td>$";
     print_r($photo['price']);
     echo ".00</td><td>";
-    ?><form action='remove_item.php'><input type='submit' method='get' value='Remove Item from Cart' name='<?php echo $photo['ID'];?>' />
+    ?><form action='scripts/remove_item.php'><input type='submit' method='get' value='Remove Item from Cart' name='<?php echo $photo['ID'];?>' />
     <?php echo "</td></tr>";
   }
 
-echo "</table>";
+echo "</table><br />";
 }
 ?>
 
 <?php
 
 if(!empty($_SESSION['ids'])) {
-	echo "<a href='emptyCart.php' class='checkout'><button>Clear Shopping Cart</button></a>";
-	echo "<a href='checkout.php' class='checkout'><button>Checkout</button></a>";
+	echo "<div class='con'><a href='scripts/emptyCart.php' class='checkout'>Clear Shopping Cart</a></div><br />";
+	echo "<div class='con'><a href='checkout.php' class='checkout'>Checkout</a></div>";
 }
 ?>
 
 <footer>
-<div><a href="index.html">Home</a> | <a href="photos.html">Photography</a></div>
-<small>&copy; Jonathan Cohen 2012</small>
+<div><a href="index.php">Home</a> | <a href="photos.php">Photography</a></div>
+<small>All images &copy; Jonathan Cohen 2012</small>
 </footer>
 </div>
 </body>

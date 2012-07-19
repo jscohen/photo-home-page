@@ -25,7 +25,7 @@ session_start();
 if(isset($_SESSION["name"])) {
 	echo "<div class='head'><span>Welcome ";
 	echo $_SESSION["name"];
-	echo "!</span>   <a href='logout.php'>Log out</a></div>";
+	echo "!</span>   <a href='scripts/logout.php'>Log out</a></div>";
 	echo "<br /><div class='head'><a href='shopping_cart.php'>Shopping Cart</a></div>";
 }
 else {
@@ -64,8 +64,10 @@ else {
 </div>
 <br />
 <div id="buttons">
-<button id="prev">Previous Image</button>
-<button id="next">Next Image</button>
+<ul class="sliders">
+<li id="prev">Previous Image</li>
+<li id="next">Next Image</li>
+</ul>
 </div>
 </div>
 
@@ -77,13 +79,13 @@ else {
   <div id="column1">
     <h2>About Me</h2>
 
-    <p>I am currently a masters student at BU Metropolitan College studying Computer Information Systems.  My interest include web design and development, programming, jogging, reading and photography.</p>
+    <p>I am currently a masters student at BU Metropolitan College studying Computer Information Systems.  My interests include web design and development, programming, jogging, reading and photography.</p>
   </div>
 
   <div id="column2">
     <h2>Photography</h2>
 
-    <p>In 2005-2006, I lived abroad in China and Israel.  In China, I spent a fair amount of time in the remote far western provinces of Xinjiang, Tibet and Yunnan, focusing my photography on landscapes and scenery.</p>
+    <p>In 2005-2006, I lived abroad in China.  In China, I spent a fair amount of time in the remote far western provinces of Xinjiang, Tibet and Yunnan, focusing my photography on landscapes and scenery.</p>
   </div>
   <div id="column3">
 
@@ -94,8 +96,8 @@ else {
 </div>
 
 <footer>
-<div><a href="index.html">Home</a> | <a href="photos.html">Photography</a></div>
-<small>&copy; Jonathan Cohen 2012</small>
+<div><a href="index.php">Home</a> | <a href="photos.php">Photography</a></div>
+<small>All images &copy; Jonathan Cohen 2012</small>
 </footer>
 </div>
 </body>

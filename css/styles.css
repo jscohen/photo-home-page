@@ -83,6 +83,13 @@ li a:active, footer a:active {
 	color:#CDC673;
 }
 
+.photoCon {
+	display:inline;
+	float:left;
+	padding:5px;
+	margin:5px;
+}
+
 footer {
 	background: #869dc7;
 }
@@ -134,7 +141,23 @@ footer a:hover {
 }
 
 #buttons {
-	margin-left:150px;
+	margin-left:15%;
+}
+
+.sliders {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+
+.sliders li {
+	background-color:grey;
+	border: 1px solid black;
+	float:left;
+	display:block;
+	padding:2px;
+	margin:2px;
+	opacity:0.8;
 }
 
 .hide {
@@ -173,8 +196,20 @@ button {
 	margin-left: 75%;
 }
 
+.con {
+	background:#0078ae;
+	margin-left:68%;
+	margin-right:18%;
+	border:2px solid black;
+}
+
+.con:hover {
+	background:rgb(0,0,175);
+}
+
 .checkout {
 	text-decoration:none;
+	color:white;
 }
 
 .clear {

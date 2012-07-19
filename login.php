@@ -15,11 +15,8 @@ session_start();
 	h3 {
 		text-align:center;
 	}
-	#form {
-		width:600px;
-		overflow:hidden;
-        padding:10px;
-		margin-left:400px;
+	.form {
+		margin-left:40%;
 	}
 	
 	label, input {
@@ -71,8 +68,8 @@ if(isset($_SESSION["login_failed"])) {
 	echo "<h3>$var</h3>";
 }
 ?>
-<div id="form">
-<form method="post" name="signup" action="authenticate.php">
+<div class="form">
+<form method="post" name="signup" action="scripts/authenticate.php">
 <label>Username/Email</label>
 <input type="text" name="user_name" /><br />
 <label>Password</label>
@@ -82,9 +79,8 @@ if(isset($_SESSION["login_failed"])) {
 </div>
 
 <footer>
-<div><a href="index.html">Home</a> | <a href="photos.html">Photography</a></div>
-<small>&copy; Jonathan Cohen 2012</small>
-</footer>
+<div><a href="index.php">Home</a> | <a href="photos.php">Photography</a></div>
+<small>All images &copy; Jonathan Cohen 2012</small></footer>
 </div>
 </body>
 </html>

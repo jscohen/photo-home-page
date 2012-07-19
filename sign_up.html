@@ -10,11 +10,8 @@
 	h3 {
 		text-align:center;
 	}
-	#form {
-		width:600px;
-		overflow:hidden;
-        padding:10px;
-		margin-left:400px;
+	.form {
+		margin-left: 40%;
 	}
 	
 	label, input {
@@ -55,7 +52,7 @@
 <h3>Please enter your email or a username from 3 to 8 characters and a password.  Your password must be at least 6 characters and less than 18.</h3>
 
 <div class="form">
-<form method="post" name="signup" action="signup.php">
+<form method="post" name="signup" action="scripts/signup.php">
 <label>Username/Email</label>
 <input type="text" name="user_name" onkeyup="validate_un()" /><span id="unError"></span><br />
 <label>Password</label>
@@ -66,8 +63,8 @@
 </div>
 
 <footer>
-<div><a href="index.html">Home</a> | <a href="photos.html">Photography</a></div>
-<small>&copy; Jonathan Cohen 2012</small>
+<div><a href="index.php">Home</a> | <a href="photos.php">Photography</a></div>
+<small>All images &copy; Jonathan Cohen 2012</small>
 </footer>
 </div>
 </body>

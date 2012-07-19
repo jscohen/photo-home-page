@@ -1,20 +1,16 @@
-	#tabNav {
-		margin: 0 auto;
-	}
-	
-	#tabs ul {
-		width:650px;
-		margin: 0 auto;
-	}
-	
 	.thumb {
 		border: 2px solid black;
-		width:45%;
 		height:340px;
-		margin-left:15px;
-		margin-top:5px;
+		margin-left:10%;
+		margin-top:5%;
 	}
 	
+	.tall {
+		border: 2px solid black;
+		height:500px;
+		margin-left:10%;
+		margin-top:5%;
+	}
 	.thumbs {
 		margin-top:25px;
 		margin: 0 auto;

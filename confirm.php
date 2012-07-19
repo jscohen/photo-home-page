@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require "database.mysql.php";
+require "scripts/database.mysql.php";
 
 $row = array();
 
@@ -11,6 +11,16 @@ foreach($_SESSION['ids'] as &$value) {
 }
 
 $_SESSION['cart'] = $row;
+
+$info = array();
+
+foreach($_POST as &$value) {
+	if(isset($value)) {
+		array_push($info, $value);
+	}
+}
+
+$count = 0;
 ?>
 
 <!DOCTYPE html>
@@ -37,7 +47,7 @@ $_SESSION['cart'] = $row;
 }
 
 #container {
-	margin-left: 200px;
+	margin-left: 25%;
 }
 </style>
 </head>
@@ -47,7 +57,7 @@ $_SESSION['cart'] = $row;
 if(isset($_SESSION["name"])) {
 	echo "<div class='head'><span>Welcome ";
 	echo $_SESSION["name"];
-	echo "!</span>   <a href='logout.php'>Log out</a></div>";
+	echo "!</span>   <a href='scripts/logout.php'>Log out</a></div>";
 	echo "<br /><div class='head'><a href='shopping_cart.php'>Shopping Cart</a></div>";
 }
 else {
@@ -91,40 +101,41 @@ else {
 <div id="container">
 <div id="billing">
 <h3>These photos will be billed to:</h3>
-<table border="1"><tr><td><?php echo $_POST['baddress']; echo " "; echo $_POST['bfname']; echo " "; echo $_POST['blname'];?></td></tr>
-<tr><td><?php echo $_POST["badd1"];?></td></tr>
-<tr><td><?php echo $_POST["badd2"];?></td></tr>
-<tr><td><?php echo $_POST["badd3"];?></td></tr>
-<tr><td>Apartment Number <?php echo $_POST["apt"];?></td></tr>
-<tr><td><?php echo $_POST["bcity"];?></td></tr>
-<tr><td><?php echo $_POST["bstate"];?></td></tr>
-<tr><td><?php echo $_POST["bzip"];?></td></tr>
+<table border="1">
+<?php 
+	for($i = $count; $i < 10; $i++) {
+		if(isset($info[$i])) {
+			echo "<tr><td>";
+			echo $info[$i];
+			echo "</td></tr>";
+		}
+		$count++;
+	}
+?>
 </table>
 </div>
-<?php if($_POST['noship'] != 'checked') {
+<?php if(!isset($_POST['noship'])) {
 echo "<div id='shipping'>
 <h3>These photos will be shipped to:</h3>
-<table border='1'>"; echo "<tr><td>"; echo $_POST['saddress']; echo " "; echo $_POST['sfname']; echo " "; echo $_POST['slname']; echo "</td></tr>";
-echo "<tr><td>"; echo $_POST["sadd1"]; echo "</td></tr>";
-echo "<tr><td>"; echo $_POST["sadd2"]; echo "</td></tr>";
-echo "<tr><td>"; echo $_POST["sadd3"]; echo "</td></tr>";
-echo "<tr><td>Apartment Number"; echo $_POST["sapt"]; echo "</td></tr>";
-echo "<tr><td>"; echo $_POST["scity"]; echo "</td></tr>";
-echo "<tr><td>"; echo $_POST["sstate"]; echo "</td></tr>";
-echo "<tr><td>"; echo $_POST["szip"]; echo "</td></tr>";
+<table border='1'>";
+
+	for($i = $count; $i < 22; $i++) {
+		if(isset($info[$i])) {
+			echo "<tr><td>";
+			echo $info[$i];
+			echo "</td></tr>";
+		}
+	}
+}
 
 echo "</table></div>";
-}
 ?>
-
-</div>
 <div class="clear"></div>
 <h2>Thank you for using the site!</h2>
 
 <footer>
-<div><a href="index.html">Home</a> | <a href="photos.html">Photography</a></div>
-<small>&copy; Jonathan Cohen 2012</small>
-</footer>
+<div><a href="index.php">Home</a> | <a href="photos.php">Photography</a></div>
+<small>All images &copy; Jonathan Cohen 2012</small></footer>
 </div>
 </body>
 </html>
