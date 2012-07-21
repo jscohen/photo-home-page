@@ -52,13 +52,20 @@
 <h3>Please enter your email or a username from 3 to 8 characters and a password.  Your password must be at least 6 characters and less than 18.</h3>
 
 <div class="form">
-<form method="post" name="signup" action="scripts/signup.php">
+<form method="post" name="signup" action="signup.php">
 <label>Username/Email</label>
 <input type="text" name="user_name" onkeyup="validate_un()" /><span id="unError"></span><br />
 <label>Password</label>
 <input type="password" name="password" id="form2" onkeyup="validate_pw()"/><span id="pwError"></span><br /><br />
+<img id="captcha" src="securimage/securimage_show.php" alt="CAPTCHA Image" />
+<br />
+<a href="#" onclick="document.getElementById('captcha').src = 'securimage/securimage_show.php?' + Math.random(); return false">[ Different Image ]</a>
+<div class="clear"></div>
+<label>Captcha Input</label><input type="text" name="captcha_code" size="10" maxlength="6" />
+<div class="clear"></div>
 <input type="submit" value="Submit" name="submit" id="submit"/><br />
 <span id="noSubmit"></span>
+
 </form>
 </div>
 

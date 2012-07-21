@@ -19,6 +19,15 @@
 		exit();
 	}
 	
+	include_once $_SERVER['DOCUMENT_ROOT'] . '/home/securimage/securimage.php';
+
+	$securimage = new Securimage();
+
+	if ($securimage->check($_POST['captcha_code']) == false) {
+		  header('Location: sign_up.html');
+		  exit();
+	}
+	
 	$con = mysql_connect("localhost", "root", "") or die(mysql_error()); 
 	mysql_select_db("photo_store", $con) or die(mysql_error()); 
 	mysql_query("INSERT INTO users(name, password) VALUES ('$name', '$password')"); 
