@@ -17,6 +17,9 @@ session_start();
 <link rel="stylesheet" type="text/css" href="css/tabs.css" />
 <script src="lytebox.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>
+
+</script>
 <?php
 if(!isset($_SESSION["name"])) {
 echo '<script src="js/hide_ecommerce.js"></script>';
