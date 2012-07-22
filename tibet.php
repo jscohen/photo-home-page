@@ -21,6 +21,9 @@ session_start();
 if(!isset($_SESSION["name"])) {
 echo '<script src="js/hide_ecommerce.js"></script>';
 }
+else {
+	echo '<script src="js/add_cart.js"></script>';
+}
 ?>
 <style>
 	p {
@@ -39,7 +42,18 @@ if(isset($_SESSION["name"])) {
 	echo "<div class='head'><span>Welcome ";
 	echo $_SESSION["name"];
 	echo "!</span>   <a href='scripts/logout.php'>Log out</a></div>";
-	echo "<br /><div class='head'><a href='shopping_cart.php'>Shopping Cart</a></div>";
+	echo "<br /><div class='head'><a href='shopping_cart.php'><img src='img/cart.png' alt='shopping cart' />Shopping Cart"; 
+	if(isset($_SESSION['ids'])) {
+		if(count($_SESSION['ids']) === 1) {
+			echo " (1 item)</a></div>";
+		}
+		else {
+			echo " ("; echo count($_SESSION['ids']); echo " items)</a></div>";
+		}
+	}
+	else {
+		echo "</a></div>";
+	}
 }
 else {
  echo "<p class='head'><a href='login.php'>Log In</a>   <a href='sign_up.html'>Sign up</a></p>";
@@ -63,11 +77,11 @@ else {
 <p>Tibet, or Shangri-La, is home to vistas of stunning natural beauty and a local populace devout in their version of Buddhism.  It also is the home of Mount Everest, or Qomolangma to the locals.  Located in the far west of China and bordering India and Nepal, Tibet provides wonderful opportunities for the photographer.</p>
 
     <p class="thumbs">
-	  <div class="photoCon"><a href="img/tibet/IMG_1065.JPG" class="lytebox" data-lyte-options="group:tibet" data-title="The Potala Palace, Lhasa, Tibet"><img class="thumb" src="img/thumbs/IMG_1065_thumb.jpg" alt="The Potala Palace, Lhasa, Tibet" /></a><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:100px;" name="11" /></form></div>
-	  <div class="photoCon"><a href="img/tibet/IMG_1333.JPG" class="lytebox" data-lyte-options="group:tibet" data-title="The fortress of Shigatse, Tibet, overlooking grassland"><img class="thumb" src="img/thumbs/IMG_1333_thumb.jpg" alt="Fortress and Grassland, Shigatse, Tibet" /></a><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:100px;" name="12" /></form></div>
-	  <div class="photoCon"><a href="img/tibet/IMG_1349.JPG" class="lytebox" data-lyte-options="group:tibet" data-title="Monks walking by prayer wheels, Drepung Monastery, Tibet"><img class="thumb" src="img/thumbs/IMG_1349_thumb.jpg" alt="Monks and Prayer Wheels, Shigatse, Tibet" /></a><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:100px;" name="13" /></form></div>
-	  <div class="photoCon"><a href="img/tibet/ToEverestandBack203.jpg" class="lytebox" data-lyte-options="group:tibet" data-title="The road to Everest, Tibet"><img class="thumb" src="img/thumbs/ToEverestandBack203_thumb.jpg" alt="The road to Mount Everest, Tibet" /></a><br /><br /><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:100px;" name="14" /></form></div>
-      <div class="photoCon"><a href="img/tibet/ToEverestandBack040.jpg" class="lytebox" data-lyte-options="group:tibet" data-title="Mount Everest, Tibet"><img class="thumb" src="img/thumbs/ToEverestandBack040_thumb.jpg" alt="Mount Everest, Tibet" /></a><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:100px;" name="15" /></form></div>
+	  <div class="photoCon"><a href="img/tibet/IMG_1065.JPG" class="lytebox" data-lyte-options="group:tibet" data-title="The Potala Palace, Lhasa, Tibet"><img class="thumb" src="img/thumbs/IMG_1065_thumb.jpg" alt="The Potala Palace, Lhasa, Tibet" /></a><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:10px;" name="11" /></form></div>
+	  <div class="photoCon"><a href="img/tibet/IMG_1333.JPG" class="lytebox" data-lyte-options="group:tibet" data-title="The fortress of Shigatse, Tibet, overlooking grassland"><img class="thumb" src="img/thumbs/IMG_1333_thumb.jpg" alt="Fortress and Grassland, Shigatse, Tibet" /></a><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:10px;" name="12" /></form></div>
+	  <div class="photoCon"><a href="img/tibet/IMG_1349.JPG" class="lytebox" data-lyte-options="group:tibet" data-title="Monks walking by prayer wheels, Drepung Monastery, Tibet"><img class="thumb" src="img/thumbs/IMG_1349_thumb.jpg" alt="Monks and Prayer Wheels, Shigatse, Tibet" /></a><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:10px;" name="13" /></form></div>
+	  <div class="photoCon"><a href="img/tibet/ToEverestandBack203.jpg" class="lytebox" data-lyte-options="group:tibet" data-title="The road to Everest, Tibet"><img class="thumb" src="img/thumbs/ToEverestandBack203_thumb.jpg" alt="The road to Mount Everest, Tibet" /></a><br /><br /><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:10px;" name="14" /></form></div>
+      <div class="photoCon"><a href="img/tibet/ToEverestandBack040.jpg" class="lytebox" data-lyte-options="group:tibet" data-title="Mount Everest, Tibet"><img class="thumb" src="img/thumbs/ToEverestandBack040_thumb.jpg" alt="Mount Everest, Tibet" /></a><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:10px;" name="15" /></form></div>
 	</p>
   </div>
   <div class="clear"></div>

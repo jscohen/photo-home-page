@@ -26,7 +26,18 @@ if(isset($_SESSION["name"])) {
 	echo "<div class='head'><span>Welcome ";
 	echo $_SESSION["name"];
 	echo "!</span>   <a href='scripts/logout.php'>Log out</a></div>";
-	echo "<br /><div class='head'><a href='shopping_cart.php'>Shopping Cart</a></div>";
+	echo "<br /><div class='head'><a href='shopping_cart.php'><img src='img/cart.png' alt='shopping cart' />Shopping Cart"; 
+	if(isset($_SESSION['ids'])) {
+		if(count($_SESSION['ids']) === 1) {
+			echo " (1 item)</a></div>";
+		}
+		else {
+			echo " ("; echo count($_SESSION['ids']); echo " items)</a></div>";
+		}
+	}
+	else {
+		echo "</a></div>";
+	}
 }
 else {
  echo "<p class='head'><a href='login.php'>Log In</a>   <a href='sign_up.html'>Sign up</a></p>";
@@ -63,18 +74,11 @@ else {
 <p class="hide" id="cap4">A lone rider on Tashkurgan Lake, Western Xinjiang</p>
 </div>
 <br />
-<div id="buttons">
-<ul class="sliders">
-<li id="prev">Previous Image</li>
-<li id="next">Next Image</li>
-</ul>
-</div>
 </div>
 
 <br />
 <br />
 <br />
-
 <div id="column_wrapper">
   <div id="column1">
     <h2>About Me</h2>

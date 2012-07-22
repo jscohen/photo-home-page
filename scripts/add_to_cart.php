@@ -16,7 +16,8 @@ array_push($_SESSION['ids'], $photo_id);
 
 $_SESSION['ids'] = array_unique($_SESSION['ids']);
 
-header( 'Location: ../shopping_cart.php');
+header('Location: ' . $_SERVER['HTTP_REFERER']);
+
 exit();
 
 ?>

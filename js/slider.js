@@ -6,7 +6,7 @@ $(document).ready(function() {
 
 	// go to the next picture when clicking on next
 	// go back to the first picture after the last one
-	$('#next').click(function() {
+	window.setInterval(function() {
 		
 		pics[pic_num].fadeOut();
 		caps[pic_num].fadeOut();
@@ -18,21 +18,6 @@ $(document).ready(function() {
 		
 		caps[pic_num].fadeIn();
 		pics[pic_num].fadeIn();
-	});
+	}, 5000);
 	
-	// go back to the previous picture, same as next
-	$('#prev').click(function() {
-		pics[pic_num].fadeOut();
-		caps[pic_num].fadeOut();
-
-		if(pic_num < 1) {
-			pic_num = 3;
-		}
-		else {
-			pic_num--;
-		}
-		
-		pics[pic_num].fadeIn();
-		caps[pic_num].fadeIn();
-	});
 });

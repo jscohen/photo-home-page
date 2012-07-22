@@ -118,15 +118,17 @@ footer a:hover {
 }
 
 #photos {
-	height:450px;
-	width:550px;
+	height:550px;
+	width:750px;
+	border-left:3px solid #000000;
 	border-right:3px solid #000000;
 	border-bottom:3px solid #000000;
+	margin-left:15%;
 }
 
 #img1, #img2, #img3, #img4 {
-	height:450px;
-	width:550px;
+	height:550px;
+	width:750px;
 	position:absolute;
 }
 
@@ -134,14 +136,14 @@ footer a:hover {
 	position:absolute;
 	background-color:gray;
 	color:#000000;
-	opacity:0.8;
-	width:553px;
-	margin-top:450px;
+	opacity:0.9;
+	width:750px;
+	margin-top:530px;
 	text-align:center;
 }
 
 #buttons {
-	margin-left:15%;
+	margin-left:40%;
 }
 
 .sliders {

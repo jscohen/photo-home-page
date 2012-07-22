@@ -21,6 +21,9 @@ session_start();
 if(!isset($_SESSION["name"])) {
 echo '<script src="js/hide_ecommerce.js"></script>';
 }
+else {
+	echo '<script src="js/add_cart.js"></script>';
+}
 ?>
 <style>
 	p {
@@ -39,7 +42,18 @@ if(isset($_SESSION["name"])) {
 	echo "<div class='head'><span>Welcome ";
 	echo $_SESSION["name"];
 	echo "!</span>   <a href='scripts/logout.php'>Log out</a></div>";
-	echo "<br /><div class='head'><a href='shopping_cart.php'>Shopping Cart</a></div>";
+	echo "<br /><div class='head'><a href='shopping_cart.php'><img src='img/cart.png' alt='shopping cart' />Shopping Cart"; 
+	if(isset($_SESSION['ids'])) {
+		if(count($_SESSION['ids']) === 1) {
+			echo " (1 item)</a></div>";
+		}
+		else {
+			echo " ("; echo count($_SESSION['ids']); echo " items)</a></div>";
+		}
+	}
+	else {
+		echo "</a></div>";
+	}
 }
 else {
  echo "<p class='head'><a href='login.php'>Log In</a>   <a href='sign_up.html'>Sign up</a></p>";
@@ -63,8 +77,8 @@ else {
 <p>Yunnan is China's most southwestern province, bordering Burma and Cambodia.  Home to China's most ethnically diverse population, Yunnan offers great opportunities for sightseeing and hiking.</p>
 	
     <p class="thumbs">
-	  <div class="photoCon"><a href="img/yunnan/yunnan346.jpg" class="lytebox" data-lyte-options="group:yunnan" data-title="A temple in Xishuangbanna, Yunnan"><img class="thumb" src="img/thumbs/yunnan_346_thumb.jpg" alt="Entrance to a Buddhist Temple, Xishuangbanna, Yunnan" /></a><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:100px;" name="21" /></form></div>
-	  <div class="photoCon"><a href="img/yunnan/yunnan360.jpg" class="lytebox" data-lyte-options="group:yunnan" data-title="A pagoda in Southwestern Yunnan, near Burma"><img class="tall" src="img/thumbs/yunnan_360_thumb.jpg" alt="A Pagoda, Xishuangbanna, Yunnan" /></a><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:100px;" name="22" /></form></div>
+	  <div class="photoCon"><a href="img/yunnan/yunnan346.jpg" class="lytebox" data-lyte-options="group:yunnan" data-title="A temple in Xishuangbanna, Yunnan"><img class="thumb" src="img/thumbs/yunnan_346_thumb.jpg" alt="Entrance to a Buddhist Temple, Xishuangbanna, Yunnan" /></a><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:10px;" name="21" /></form></div>
+	  <div class="photoCon"><a href="img/yunnan/yunnan360.jpg" class="lytebox" data-lyte-options="group:yunnan" data-title="A pagoda in Southwestern Yunnan, near Burma"><img class="tall" src="img/thumbs/yunnan_360_thumb.jpg" alt="A Pagoda, Xishuangbanna, Yunnan" /></a><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:10px;" name="22" /></form></div>
 	</p>
 </div>
 <div class="clear"></div>
