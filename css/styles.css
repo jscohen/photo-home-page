@@ -15,6 +15,28 @@ body {
 	margin-right:5px;
 }
 
+
+.head a {
+	text-decoration:none;
+}
+
+.head a:link {
+	color: rgb(0,0,85);
+}
+
+.head a:visited {
+	color: rgb(0,0,85);
+}
+
+.head a:hover {
+	color: rgb(0,0,250);
+}
+
+.head a:active {
+	color: rgb(0,0,85);
+}
+
+
 header, nav, footer {
 	display:block;
 }
