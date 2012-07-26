@@ -16,6 +16,9 @@ $info = array();
 
 foreach($_POST as &$value) {
 	if(isset($value)) {
+		if($value === "checked") {
+			continue;
+		}
 		array_push($info, $value);
 	}
 }
