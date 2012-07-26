@@ -26,7 +26,7 @@ if(isset($_SESSION["name"])) {
 	echo "<div class='head'><span>Welcome ";
 	echo $_SESSION["name"];
 	echo "!</span>   <a href='scripts/logout.php'>Log out</a></div>";
-	echo "<br /><div class='head'><a href='shopping_cart.php'><img src='img/cart.png' alt='shopping cart' />Shopping Cart"; 
+	echo "<br /><div class='head'><img src='img/cart.png' alt='shopping cart' /><a href='shopping_cart.php'>Shopping Cart"; 
 	if(isset($_SESSION['ids'])) {
 		if(count($_SESSION['ids']) === 1) {
 			echo " (1 item)</a></div>";
@@ -40,7 +40,7 @@ if(isset($_SESSION["name"])) {
 	}
 }
 else {
- echo "<p class='head'><a href='login.php'>Log In</a>   <a href='sign_up.html'>Sign up</a></p>";
+ echo "<p class='head'><a href='login.php'>Log In</a> |  <a href='sign_up.html'>Sign up</a></p>";
 }
 ?>
 <header>

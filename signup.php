@@ -28,12 +28,14 @@
 		  exit();
 	}
 	
-	$con = mysql_connect("localhost", "root", "") or die(mysql_error()); 
+	$con = mysql_connect("localhost", "root", "bleddavy") or die(mysql_error()); 
 	mysql_select_db("photo_store", $con) or die(mysql_error()); 
 	mysql_query("INSERT INTO users(name, password) VALUES ('$name', '$password')"); 
 	
 	mysql_close($con);
 	$_SESSION["name"] = $_POST['user_name'];
+	$_SESSION['ids'] = array();
+    $_SESSION['cart'] = array();
 	header( 'Location: index.php' );
 	exit();
 ?>
