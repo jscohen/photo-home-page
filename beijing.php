@@ -16,6 +16,7 @@ session_start();
 <link rel="stylesheet" type="text/css" href="lytebox.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="css/tabs.css" />
 <script src="lytebox.js"></script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <?php
 if(!isset($_SESSION["name"])) {
@@ -76,12 +77,12 @@ else {
 <h2>Beijing</h2>
 <p>Beijing is the capital of China, home to the Forbidden City and Tiananmen Square.  My photos there took place during 2006.  In Beijing, I travelled around the city and also to the Great Wall of China.</p>
 
-    <p class="thumbs">
+    <div class="thumbs">
 	  <div class="photoCon"><a href="img/beijing/forbiddencity001.jpg" class="lytebox" data-lyte-options="group:beijing" data-title="The front of the Forbidden City"><img class="thumb" src="img/thumbs/forbiddencity_001_thumb.jpg" alt="The front of the forbidden city" /></a><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:10px;" name="1" /></form></div>
 	  <div class="photoCon"><a href="img/beijing/forbiddencity032.jpg" class="lytebox" data-lyte-options="group:beijing" data-title="A Wall in the Forbidden City"><img class="thumb" src="img/thumbs/forbiddencity_032_thumb.jpg" alt="A Wall in the Forbidden City" /></a><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:10px;" name="2" /></form></div>
 	  <div class="photoCon"><a href="img/beijing/greatwall018.jpg" class="lytebox" data-lyte-options="group:beijing" data-title="A shot of the Great Wall of China"><img class="thumb" src="img/thumbs/greatwall_018_thumb.jpg" alt="A shot of the Great Wall of China" /></a><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:10px;" name="3" /></form></div>
 	  <div class="photoCon"><a href="img/beijing/tiananmen093.jpg" class="lytebox" data-lyte-options="group:beijing" data-title="A shot of Tiananmen Square and Chinese Parliament at night"><img class="thumb" src="img/thumbs/tiananmen093_thumb.jpg" alt="A shot of Tiananmen Square and Chinese Parliament at night" /></a><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:10px;" name="4" /></form></div>
-	</p>
+	</div>
 
 </div>
 <div class="clear"></div>

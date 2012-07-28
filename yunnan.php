@@ -76,10 +76,10 @@ else {
 <h2>Yunnan</h2>
 <p>Yunnan is China's most southwestern province, bordering Burma and Cambodia.  Home to China's most ethnically diverse population, Yunnan offers great opportunities for sightseeing and hiking.</p>
 	
-    <p class="thumbs">
+    <div class="thumbs">
 	  <div class="photoCon"><a href="img/yunnan/yunnan346.jpg" class="lytebox" data-lyte-options="group:yunnan" data-title="A temple in Xishuangbanna, Yunnan"><img class="thumb" src="img/thumbs/yunnan_346_thumb.jpg" alt="Entrance to a Buddhist Temple, Xishuangbanna, Yunnan" /></a><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:10px;" name="21" /></form></div>
 	  <div class="photoCon"><a href="img/yunnan/yunnan360.jpg" class="lytebox" data-lyte-options="group:yunnan" data-title="A pagoda in Southwestern Yunnan, near Burma"><img class="tall" src="img/thumbs/yunnan_360_thumb.jpg" alt="A Pagoda, Xishuangbanna, Yunnan" /></a><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:10px;" name="22" /></form></div>
-	</p>
+	</div>
 </div>
 <div class="clear"></div>
 

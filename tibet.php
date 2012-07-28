@@ -76,13 +76,13 @@ else {
 <h2>Tibet</h2>
 <p>Tibet, or Shangri-La, is home to vistas of stunning natural beauty and a local populace devout in their version of Buddhism.  It also is the home of Mount Everest, or Qomolangma to the locals.  Located in the far west of China and bordering India and Nepal, Tibet provides wonderful opportunities for the photographer.</p>
 
-    <p class="thumbs">
+    <div class="thumbs">
 	  <div class="photoCon"><a href="img/tibet/IMG_1065.JPG" class="lytebox" data-lyte-options="group:tibet" data-title="The Potala Palace, Lhasa, Tibet"><img class="thumb" src="img/thumbs/IMG_1065_thumb.jpg" alt="The Potala Palace, Lhasa, Tibet" /></a><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:10px;" name="11" /></form></div>
 	  <div class="photoCon"><a href="img/tibet/IMG_1333.JPG" class="lytebox" data-lyte-options="group:tibet" data-title="The fortress of Shigatse, Tibet, overlooking grassland"><img class="thumb" src="img/thumbs/IMG_1333_thumb.jpg" alt="Fortress and Grassland, Shigatse, Tibet" /></a><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:10px;" name="12" /></form></div>
 	  <div class="photoCon"><a href="img/tibet/IMG_1349.JPG" class="lytebox" data-lyte-options="group:tibet" data-title="Monks walking by prayer wheels, Drepung Monastery, Tibet"><img class="thumb" src="img/thumbs/IMG_1349_thumb.jpg" alt="Monks and Prayer Wheels, Shigatse, Tibet" /></a><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:10px;" name="13" /></form></div>
 	  <div class="photoCon"><a href="img/tibet/ToEverestandBack203.jpg" class="lytebox" data-lyte-options="group:tibet" data-title="The road to Everest, Tibet"><img class="thumb" src="img/thumbs/ToEverestandBack203_thumb.jpg" alt="The road to Mount Everest, Tibet" /></a><br /><br /><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:10px;" name="14" /></form></div>
       <div class="photoCon"><a href="img/tibet/ToEverestandBack040.jpg" class="lytebox" data-lyte-options="group:tibet" data-title="Mount Everest, Tibet"><img class="thumb" src="img/thumbs/ToEverestandBack040_thumb.jpg" alt="Mount Everest, Tibet" /></a><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:10px;" name="15" /></form></div>
-	</p>
+	</div>
   </div>
   <div class="clear"></div>
 

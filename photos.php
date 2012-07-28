@@ -37,7 +37,7 @@ session_start();
 		text-align:center;
 	}
 	#photoContainer {
-		margin-left:10%;
+		margin-left:12.5%;
 	}
 	.section {
 		display:inline;
@@ -75,7 +75,7 @@ if(isset($_SESSION["name"])) {
 	}
 }
 else {
- echo "<p class='head'><a href='login.php'>Log In</a>   <a href='sign_up.html'>Sign up</a></p>";
+ echo "<p class='head'><a href='login.php'>Log In</a> |  <a href='sign_up.html'>Sign up</a></p>";
 }
 ?>
 <header>
