@@ -137,7 +137,6 @@ foreach($_SESSION['cart'] as &$photo) {
 
 
 <h2>Please enter your billing and shipping information</h2>
-<h2>Please note that this is a class project site: DO NOT actually send your personal information here</h2>
 <br />
 
 <div class="formContainer">

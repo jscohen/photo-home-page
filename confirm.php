@@ -15,7 +15,7 @@ $_SESSION['cart'] = $row;
 $info = array();
 
 foreach($_POST as &$value) {
-	if(isset($value)) {
+	if(!empty($value)) {
 		if($value === "checked") {
 			continue;
 		}
@@ -146,8 +146,9 @@ echo "</table></div>";
 ?>
 <div class="clear"></div>
 
-</div>
+
 <h2>Thank you for using the site!</h2>
+
 
 <footer>
 <div><a href="index.php">Home</a> | <a href="photos.php">Photography</a></div>

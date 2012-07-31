@@ -1,4 +1,4 @@
 photo-home-page
 ===============
 
-My home page with photography
+To create the database for use, run photos.sql in the scripts folder.
