@@ -131,6 +131,10 @@ foreach($_SESSION['cart'] as &$photo) {
   print_r($photo['price']);
   echo ".00</td></tr>";
 }
+
+	echo "<tr><td>Total</td><td>$";
+	echo $_SESSION['total'];
+	echo ".00</td></tr>";
 ?>
 
 </table>

@@ -109,6 +109,9 @@ else {
     print_r($photo['price']);
     echo ".00</td></tr>";
   }
+    echo "<tr><td>Total</td><td>$";
+	echo $_SESSION['total'];
+	echo ".00</td></tr>";
 ?>
 </table>
 
@@ -140,13 +143,15 @@ echo "<div id='shipping'>
 			echo "</td></tr>";
 		}
 	}
+	
+
 }
 
 echo "</table></div>";
 ?>
 <div class="clear"></div>
 
-
+</div>
 <h2>Thank you for using the site!</h2>
 
 

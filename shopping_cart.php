@@ -11,6 +11,10 @@ foreach($_SESSION['ids'] as &$value) {
 }
 
 $_SESSION['cart'] = $row;
+$_SESSION['total'] = 0;
+foreach($_SESSION['cart'] as &$photo) {
+	$_SESSION['total'] += $photo['price'];
+}
 ?>
 
 <!DOCTYPE html>
@@ -84,7 +88,11 @@ else {
     ?><form action='scripts/remove_item.php'><img src="img/cart_remove.png" alt="Remove from Cart"/><input type='submit' method='get' value='Remove Item from Cart' name='<?php echo $photo['ID'];?>' />
     <?php echo "</td></tr>";
   }
-
+	
+	echo "<tr><td>Total</td><td>$";
+	echo $_SESSION['total'];
+	echo ".00</td></tr>";
+	
 echo "</table><br />";
 }
 ?>
