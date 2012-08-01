@@ -20,7 +20,4 @@ while($desc = mysql_fetch_array($descriptions)) {
 
 mysql_close($resource);
 
-$_SESSION['prices'] = $costs;
-$_SESSION['descriptions'] = $descs;
-
 ?>
