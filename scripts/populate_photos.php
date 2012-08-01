@@ -18,10 +18,9 @@ while($desc = mysql_fetch_array($descriptions)) {
 	array_push($descs,$desc['description']);
 }
 
+mysql_close($resource);
+
 $_SESSION['prices'] = $costs;
 $_SESSION['descriptions'] = $descs;
-
-print_r($_SESSION['prices']);
-print_r($_SESSION['descriptions']);
 
 ?>

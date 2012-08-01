@@ -10,6 +10,8 @@ foreach($_SESSION['ids'] as &$value) {
 	array_push($row, mysql_fetch_assoc($users));
 }
 
+mysql_close($resource);
+
 $_SESSION['cart'] = $row;
 $_SESSION['total'] = 0;
 foreach($_SESSION['cart'] as &$photo) {
