@@ -2,6 +2,8 @@
 
 session_start();
 
+require "scripts/populate_photos.php";
+
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +22,8 @@ session_start();
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <?php
 if(!isset($_SESSION["name"])) {
-echo '<script src="js/hide_ecommerce.js"></script>';
+	echo '<script src="js/hide_ecommerce.js"></script>';
+	echo '<link rel="stylesheet" type="text/css" href="css/unset.css" />';
 }
 else {
 	echo '<script src="js/add_cart.js"></script>';
@@ -78,10 +81,10 @@ else {
 <p>Beijing is the capital of China, home to the Forbidden City and Tiananmen Square.  My photos there took place during 2006.  In Beijing, I travelled around the city and also to the Great Wall of China.</p>
 
     <div class="thumbs">
-	  <div class="photoCon"><a href="img/beijing/forbiddencity001.jpg" class="lytebox" data-lyte-options="group:beijing" data-title="The front of the Forbidden City"><img class="thumb" src="img/thumbs/forbiddencity_001_thumb.jpg" alt="The front of the forbidden city" /></a><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:10px;" name="1" /></form><span></span><span>Price: $.00</span></div>
-	  <div class="photoCon"><a href="img/beijing/forbiddencity032.jpg" class="lytebox" data-lyte-options="group:beijing" data-title="A Wall in the Forbidden City"><img class="thumb" src="img/thumbs/forbiddencity_032_thumb.jpg" alt="A Wall in the Forbidden City" /></a><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:10px;" name="2" /></form><span></span><span>Price: $.00</span></div>
-	  <div class="photoCon"><a href="img/beijing/greatwall018.jpg" class="lytebox" data-lyte-options="group:beijing" data-title="A shot of the Great Wall of China"><img class="thumb" src="img/thumbs/greatwall_018_thumb.jpg" alt="A shot of the Great Wall of China" /></a><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:10px;" name="3" /></form><span></span><span>Price: $.00</span></div>
-	  <div class="photoCon"><a href="img/beijing/tiananmen093.jpg" class="lytebox" data-lyte-options="group:beijing" data-title="A shot of Tiananmen Square and Chinese Parliament at night"><img class="thumb" src="img/thumbs/tiananmen093_thumb.jpg" alt="A shot of Tiananmen Square and Chinese Parliament at night" /></a><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:10px;" name="4" /></form><span></span><span>Price: $.00</span></div>
+	  <div class="photoCon"><a href="img/beijing/forbiddencity001.jpg" class="lytebox" data-lyte-options="group:beijing" data-title="The front of the Forbidden City"><img class="thumb" src="img/thumbs/forbiddencity_001_thumb.jpg" alt="The front of the forbidden city" /></a><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:10px;" name="1" /></form><span><?php echo $descs[0];?></span><span>  <strong>|</strong>  Price: $<?php echo $costs[0];?>.00</span></div>
+	  <div class="photoCon"><a href="img/beijing/forbiddencity032.jpg" class="lytebox" data-lyte-options="group:beijing" data-title="A Wall in the Forbidden City"><img class="thumb" src="img/thumbs/forbiddencity_032_thumb.jpg" alt="A Wall in the Forbidden City" /></a><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:10px;" name="2" /></form><span><?php echo $descs[1];?></span><span>  <strong>|</strong>  Price: $<?php echo $costs[1];?>.00</span></div>
+	  <div class="photoCon"><a href="img/beijing/greatwall018.jpg" class="lytebox" data-lyte-options="group:beijing" data-title="A shot of the Great Wall of China"><img class="thumb" src="img/thumbs/greatwall_018_thumb.jpg" alt="A shot of the Great Wall of China" /></a><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:10px;" name="3" /></form><span><?php echo $descs[2];?></span><span>  <strong>|</strong>  Price: $<?php echo $costs[2];?>.00</span></div>
+	  <div class="photoCon"><a href="img/beijing/tiananmen093.jpg" class="lytebox" data-lyte-options="group:beijing" data-title="A shot of Tiananmen Square and Chinese Parliament at night"><img class="thumb" src="img/thumbs/tiananmen093_thumb.jpg" alt="A shot of Tiananmen Square and Chinese Parliament at night" /></a><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:10px;" name="4" /></form><span><?php echo $descs[3];?></span><span>  <strong>|</strong>  Price: $<?php echo $costs[3];?>.00</span></div>
 	</div>
 
 </div>

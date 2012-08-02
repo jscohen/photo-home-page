@@ -1,3 +1,3 @@
 $(document).ready(function(){
-	$('form').hide();
+	$('input').hide();
 });

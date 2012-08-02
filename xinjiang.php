@@ -2,6 +2,8 @@
 
 session_start();
 
+require "scripts/populate_photos.php";
+
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +21,8 @@ session_start();
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <?php
 if(!isset($_SESSION["name"])) {
-echo '<script src="js/hide_ecommerce.js"></script>';
+	echo '<script src="js/hide_ecommerce.js"></script>';
+	echo '<link rel="stylesheet" type="text/css" href="css/unset.css" />';
 }
 else {
 	echo '<script src="js/add_cart.js"></script>';
@@ -77,11 +80,11 @@ else {
 <p>Xinjiang is China's far western province directly north of Tibet.  Populated by the Turkic Muslim Uighurs, Xinjiang holds a store of surprises for visitors from other parts of China.</p>
 
 	<div class="thumbs">
-	  <div class="photoCon"><a href="img/xinjiang/xj_036.jpg" class="lytebox" data-lyte-options="group:xinjiang" data-title="Exploring the Taklamakan Desert, Xinjiang"><img class="thumb" src="img/thumbs/xj_036_thumb.jpg" alt="The Taklamakan Desert, Western Xinjiang near Kashgar 1" /></a><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:10px;" name="16" /></form><span></span><span>Price: $.00</span></div>
-	  <div class="photoCon"><a href="img/xinjiang/xj_037.jpg" class="lytebox" data-lyte-options="group:xinjiang" data-title="Desert Dunes, Taklamakan, Xinjiang"><img class="thumb" src="img/thumbs/xj_038_thumb.jpg" alt="The Taklamakan Desert, Western Xinjiang 2" /></a><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:10px;" name="17" /></form><span></span><span>Price: $.00</span></div>
-	  <div class="photoCon"><a href="img/xinjiang/xj_038.jpg" class="lytebox" data-lyte-options="group:xinjiang" data-title="Alone in the desert, Taklamakan, Xinjiang"><img class="thumb" src="img/thumbs/xj_037_thumb.jpg" alt="The Taklamakan Desert, Western Xinjiang 3" /></a><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:10px;" name="18" /></form><span></span><span>Price: $.00</span></div>
-	  <div class="photoCon"><a href="img/xinjiang/xj_042.jpg" class="lytebox" data-lyte-options="group:xinjiang" data-title="A lone rider on Tashkurgan Lake near Kyrgyzstan, Xinjiang"><img class="thumb" src="img/thumbs/xj_042_thumb.jpg" alt="A lone rider on lake Tashkurgan near the Kyrgyz border" /></a><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:10px;" name="19" /></form><span></span><span>Price: $.00</span></div>
-	  <div class="photoCon"><a href="img/xinjiang/xj_007.jpg" class="lytebox" data-lyte-options="group:xinjiang" data-title="The Khoja mosque, Kashgar, Xinjiang"><img class="thumb" src="img/thumbs/xj_007_thumb.jpg" alt="The Khoja Mosque near Kashgar, Xinjiang" /></a><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:10px;" name="20" /></form><span></span><span>Price: $.00</span></div>
+	  <div class="photoCon"><a href="img/xinjiang/xj_036.jpg" class="lytebox" data-lyte-options="group:xinjiang" data-title="Exploring the Taklamakan Desert, Xinjiang"><img class="thumb" src="img/thumbs/xj_036_thumb.jpg" alt="The Taklamakan Desert, Western Xinjiang near Kashgar 1" /></a><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:10px;" name="16" /></form><span><?php echo $descs[15];?></span><span>  <strong>|</strong>  Price: $<?php echo $costs[15];?>.00</span></div>
+	  <div class="photoCon"><a href="img/xinjiang/xj_037.jpg" class="lytebox" data-lyte-options="group:xinjiang" data-title="Desert Dunes, Taklamakan, Xinjiang"><img class="thumb" src="img/thumbs/xj_038_thumb.jpg" alt="The Taklamakan Desert, Western Xinjiang 2" /></a><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:10px;" name="17" /></form><span><?php echo $descs[16];?></span><span>  <strong>|</strong>  Price: $<?php echo $costs[16];?>.00</span></div>
+	  <div class="photoCon"><a href="img/xinjiang/xj_038.jpg" class="lytebox" data-lyte-options="group:xinjiang" data-title="Alone in the desert, Taklamakan, Xinjiang"><img class="thumb" src="img/thumbs/xj_037_thumb.jpg" alt="The Taklamakan Desert, Western Xinjiang 3" /></a><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:10px;" name="18" /></form><span><?php echo $descs[17];?></span><span>  <strong>|</strong>  Price: $<?php echo $costs[17];?>.00</span></div>
+	  <div class="photoCon"><a href="img/xinjiang/xj_042.jpg" class="lytebox" data-lyte-options="group:xinjiang" data-title="A lone rider on Tashkurgan Lake near Kyrgyzstan, Xinjiang"><img class="thumb" src="img/thumbs/xj_042_thumb.jpg" alt="A lone rider on lake Tashkurgan near the Kyrgyz border" /></a><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:10px;" name="19" /></form><span><?php echo $descs[18];?></span><span>  <strong>|</strong>  Price: $<?php echo $costs[18];?>.00</span></div>
+	  <div class="photoCon"><a href="img/xinjiang/xj_007.jpg" class="lytebox" data-lyte-options="group:xinjiang" data-title="The Khoja mosque, Kashgar, Xinjiang"><img class="thumb" src="img/thumbs/xj_007_thumb.jpg" alt="The Khoja Mosque near Kashgar, Xinjiang" /></a><form action="scripts/add_to_cart.php"><input type="submit" value="Add to Cart" method="get" class="photo" style="margin-left:10px;" name="20" /></form><span><?php echo $descs[19];?></span><span>  <strong>|</strong>  Price: $<?php echo $costs[19];?>.00</span></div>
 	</div>
 </div>
 
