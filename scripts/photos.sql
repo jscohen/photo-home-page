@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 01, 2012 at 01:36 AM
+-- Generation Time: Aug 02, 2012 at 10:44 PM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -49,7 +49,7 @@ INSERT INTO `photos` (`ID`, `description`, `price`) VALUES
 (10, 'Sunset on the West Lake, Hangzhou', 5),
 (11, 'Potala Palace, Lhasa, Tibet', 10),
 (12, 'Shigatse Fortress, Shigatse, Tibet', 5),
-(13, 'Monks Walking alongside Prayer Wheels, Drepung Monastery, Tibet', 5),
+(13, 'Monks Walking alongside Prayer Wheels, Tibet', 5),
 (14, 'The Road to Everest, Southwest Tibet', 5),
 (15, 'Mount Everest, Tibet', 5),
 (16, 'The Taklamakan Desert, Xinjiang 1', 5),
@@ -57,8 +57,8 @@ INSERT INTO `photos` (`ID`, `description`, `price`) VALUES
 (18, 'The Taklamakan Desert, Xinjiang 3', 5),
 (19, 'A lone rider near Tashkurgan, western Xinjiang', 5),
 (20, 'The Apaq Khoja Mosque, Kashgar, Xinjiang', 5),
-(21, 'Entrance to a temple, Xishuangbanna, Southwestern Yunnan', 5),
-(22, 'A Buddhist stupa, Xishuangbanna, Yunnan', 10);
+(21, 'Entrance to a temple, Southwestern Yunnan', 5),
+(22, 'A Buddhist stupa, Yunnan', 10);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
