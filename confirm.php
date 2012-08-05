@@ -150,9 +150,12 @@ echo "<div id='shipping'>
 echo "</table></div>";
 ?>
 <div class="clear"></div>
-
-</div>
+<?php if(!isset($_POST['noship'])) {
+	echo "</div>";
+}
+?>
 <h2>Thank you for using the site!</h2>
+
 
 
 <footer>

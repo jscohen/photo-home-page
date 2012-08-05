@@ -252,3 +252,7 @@ footer div{
 	word-spacing: 50px;
 	text-align:center;
 }
+
+small {
+	margin-left:5px;
+}
